@@ -13,7 +13,10 @@ import {
 
 import { fetchLatestInvoices, fetchCardData } from '@/app/lib/data';
 import CardWrapper from '@/app/ui/dashboard/cards';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'dashboard',
+};
 export default async function Page() {
   const latestInvoices = await fetchLatestInvoices();
 
