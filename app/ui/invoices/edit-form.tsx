@@ -54,7 +54,12 @@ export default function EditInvoiceForm({
           <div id="customer-error" aria-live="polite" aria-atomic="true">
             {state.errors?.customerId &&
               state.errors.customerId.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500">{error}</p>
+                <p
+                  key={Math.random() * 8}
+                  className="mt-2 text-sm text-red-500"
+                >
+                  {error}
+                </p>
               ))}
           </div>
         </div>
@@ -82,7 +87,12 @@ export default function EditInvoiceForm({
           <div id="amount-error" aria-live="polite" aria-atomic="true">
             {state.errors?.amount &&
               state.errors.amount.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500">{error}</p>
+                <p
+                  key={Math.random() * 2}
+                  className="mt-2 text-sm text-red-500"
+                >
+                  {error}
+                </p>
               ))}
           </div>
         </div>
@@ -132,7 +142,12 @@ export default function EditInvoiceForm({
             <div id="status-error" aria-live="polite" aria-atomic="true">
               {state.errors?.status &&
                 state.errors.status.map((error: string) => (
-                  <p className="mt-2 text-sm text-red-500">{error}</p>
+                  <p
+                    key={Math.random() * 3}
+                    className="mt-2 text-sm text-red-500"
+                  >
+                    {error}
+                  </p>
                 ))}
             </div>
           </div>
